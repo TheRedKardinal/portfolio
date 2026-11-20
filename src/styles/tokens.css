@@ -1,0 +1,88 @@
+/*
+  Token di design (SITE-SPEC.md, sezioni 2 e 3).
+
+  Breakpoint: le custom properties non funzionano nelle media query,
+  quindi i valori vanno scritti a mano:
+    tablet  @media (min-width: 40rem)   640 px
+    desktop @media (min-width: 64rem)  1024 px
+
+  Le dimensioni del testo passano dal valore mobile a quello desktop
+  fra 640 e 1024 px di larghezza: clamp(min, min - pendenza * 640px + pendenza * 100vw, max).
+*/
+
+:root {
+  /* Colori */
+  --paper: #f4ede0;
+  --paper-deep: #eae0ce;
+  --ink: #111111;
+  --red: #e63b2e;
+  --red-text: #b8261c;
+  --cyan: #1e88c8;
+  --white: #fffdf8;
+
+  /* Font */
+  --font-display: 'Bangers', Impact, 'Arial Narrow Bold', sans-serif;
+  --font-body: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+
+  /* Dimensioni del testo: mobile → desktop */
+  --fs-display: clamp(3.5rem, -0.6667rem + 10.4167vw, 6rem); /* 56 → 96 px */
+  --fs-h2: clamp(2.5rem, 0.8333rem + 4.1667vw, 3.5rem); /* 40 → 56 px */
+  --fs-h3: clamp(1.625rem, 1rem + 1.5625vw, 2rem); /* 26 → 32 px */
+  --fs-hero-sub: 2rem; /* 32 px */
+  --fs-label: clamp(1rem, 0.7917rem + 0.5208vw, 1.125rem); /* 16 → 18 px */
+  --fs-body: clamp(1rem, 0.7917rem + 0.5208vw, 1.125rem); /* 16 → 18 px */
+  --fs-balloon: clamp(1.125rem, 0.7083rem + 1.0417vw, 1.375rem); /* 18 → 22 px */
+  --fs-chip: 0.875rem; /* 14 px */
+
+  /* Interlinea e spaziatura delle lettere */
+  --lh-display: 0.95;
+  --lh-body: 1.6;
+  --lh-balloon: 1.45;
+  --ls-display: 0.01em;
+  --ls-label: 0.04em;
+
+  /* Pesi di Plus Jakarta Sans */
+  --fw-body: 500;
+  --fw-balloon: 600;
+  --fw-chip: 700;
+
+  /* Scala di spaziatura: 4, 8, 12, 16, 24, 32, 48, 72, 112 px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  /* Bordi e ombre (in px) */
+  --border-width: 3px;
+  --border: var(--border-width) solid var(--ink);
+  --shadow-panel: 6px 6px 0 var(--ink);
+  --shadow-panel-hover: 8px 8px 0 var(--ink);
+  --shadow-offset: 6px 6px 0 var(--ink), 10px 10px 0 var(--cyan);
+
+  /* Layout */
+  --container: 75rem; /* 1200 px */
+  --gutter: 1.5rem; /* 24 px */
+  --page-pad: 1rem; /* 16 px su mobile */
+  --section-gap: 4.5rem; /* 72 px su mobile */
+  --header-h: 3.75rem; /* 60 px su mobile */
+  --measure: 65ch;
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --page-pad: 1.5rem; /* 24 px su tablet */
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --page-pad: 3rem; /* 48 px su desktop */
+    --section-gap: 7rem; /* 112 px su desktop */
+    --header-h: 4.5rem; /* 72 px su desktop */
+  }
+}
