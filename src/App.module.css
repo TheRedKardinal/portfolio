@@ -1,0 +1,128 @@
+/* Campionario temporaneo del task 2. */
+
+.page {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: var(--space-7) var(--page-pad) var(--space-9);
+}
+
+.block {
+  margin-top: var(--section-gap);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.sub {
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: var(--fs-hero-sub);
+  color: var(--red);
+  line-height: 1.1;
+  margin-top: var(--space-3);
+}
+
+.accents {
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  letter-spacing: var(--ls-label);
+}
+
+.body {
+  max-width: var(--measure);
+}
+
+.balloon {
+  max-width: var(--measure);
+  font-size: var(--fs-balloon);
+  font-weight: var(--fw-balloon);
+  line-height: var(--lh-balloon);
+  background: var(--white);
+  border: var(--border);
+  border-radius: 1.5rem;
+  padding: var(--space-5);
+}
+
+.redText {
+  color: var(--red-text);
+}
+
+.swatches,
+.chips,
+.spaces {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.swatches li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.swatch {
+  width: 3rem;
+  height: 3rem;
+  border: var(--border);
+}
+
+.chips li {
+  font-size: var(--fs-chip);
+  font-weight: var(--fw-chip);
+  background: var(--white);
+  border: 2px solid var(--ink);
+  padding: var(--space-1) var(--space-3);
+}
+
+.spaces {
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.spaces li {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  align-items: center;
+}
+
+.bar {
+  height: 1rem;
+  background: var(--red);
+}
+
+.panels {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 40rem) {
+  .panels {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.panel {
+  text-transform: uppercase;
+  display: block;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow-panel);
+  padding: var(--space-5);
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  text-decoration: none;
+}
+
+.offset {
+  box-shadow: var(--shadow-offset);
+}
