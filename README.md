@@ -4,7 +4,7 @@
 
 Personal portfolio of Claudio Giasi, AI Full-Stack Developer based in Naples, Italy. A single-page site styled like a printed comic book, in Italian and English.
 
-The site is a work in progress.
+Live at https://claudiogiasi.vercel.app (work in progress).
 
 ## Stack
 

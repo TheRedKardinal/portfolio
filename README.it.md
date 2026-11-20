@@ -4,7 +4,7 @@
 
 Portfolio personale di Claudio Giasi, AI Full-Stack Developer a Napoli. Un sito a pagina singola in stile fumetto stampato, in italiano e in inglese.
 
-Il sito è in costruzione.
+Online su https://claudiogiasi.vercel.app (in costruzione).
 
 ## Stack
 
