@@ -1,0 +1,24 @@
+/* Pagine provvisorie del task 3: le sezioni vere arrivano dal task 5. */
+
+.page {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: var(--space-7) var(--page-pad);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.sub {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero-sub);
+  color: var(--red);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.langs {
+  display: flex;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--fs-label);
+}
