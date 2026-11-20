@@ -31,3 +31,6 @@ dist-ssr
 # Documenti di lavoro locali
 docs-locali/
 CLAUDE.md
+
+# Script di avvio locali (Windows)
+*.cmd
